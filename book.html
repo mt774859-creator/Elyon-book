@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="reader">
+    <iframe id="livro" src="" frameborder="0"></iframe>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const arquivo = params.get("arquivo");
+    document.getElementById("livro").src = "books/" + arquivo;
+</script>
+
+</body>
+</html>
